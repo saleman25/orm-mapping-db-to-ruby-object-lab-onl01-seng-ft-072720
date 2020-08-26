@@ -61,7 +61,7 @@ def self.find_by_name(name)
   end
 end
 
- def self.students_below_12th_grade
+def self.students_below_12th_grade
     sql = <<-SQL
       SELECT *
       FROM students
@@ -70,10 +70,10 @@ end
 
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
-    end
-  end
+end
+end
 
-  def self.all_students_in_grade_9
+def self.all_students_in_grade_9
     sql = <<-SQL
       SELECT COUNT(*)
       FROM students
@@ -82,10 +82,10 @@ end
 
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
-    end
-  end
+end
+end
 
-  def self.first_X_students_in_grade_10(number)
+def self.first_X_students_in_grade_10(number)
     sql = <<-SQL
       SELECT *
       FROM students
@@ -96,10 +96,10 @@ end
 
     DB[:conn].execute(sql, number).map do |row|
       self.new_from_db(row)
-    end
-  end
+end
+end
 
-  def self.first_student_in_grade_10
+def self.first_student_in_grade_10
     sql = <<-SQL
       SELECT *
       FROM students
@@ -109,10 +109,10 @@ end
 
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
-    end.first
-  end
+end.first
+end
 
-  def self.all_students_in_grade_X(grade)
+def self.all_students_in_grade_X(grade)
     sql = <<-SQL
       SELECT *
       FROM students
@@ -122,5 +122,5 @@ end
 
     DB[:conn].execute(sql, grade).map do |row|
       self.new_from_db(row)
-    end
-  end
+end
+end
