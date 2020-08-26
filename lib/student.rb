@@ -10,7 +10,13 @@ def self.new_from_db(row)
 end
 
 def self.all
-  
+    sql = <<-SQL
+      SELECT *
+      FROM students
+    SQL
+ 
+    DB[:conn].execute(sql)
+  end
 end
 
 def self.find_by_name(name)
