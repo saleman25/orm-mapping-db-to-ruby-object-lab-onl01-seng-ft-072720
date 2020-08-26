@@ -60,3 +60,11 @@ def self.find_by_name(name)
     DB[:conn].execute(sql)
   end
 end
+
+def self.all_students_in_grade_9
+sql = <<-SQL
+    SELECT students 
+    SQL
+
+    DB[:conn].execute(sql)
+  end 
