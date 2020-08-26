@@ -73,7 +73,7 @@ def self.students_below_12th_grade
 end
 end
 
-def self.all_students_in_grade_9
+def all_students_in_grade_9
     sql = <<-SQL
       SELECT COUNT(*)
       FROM students
