@@ -141,4 +141,4 @@ def self.all_students_in_grade_X(grade)
     DB[:conn].execute(sql, grade).map do |row|
       self.new_from_db(row)
 end
-
+end
