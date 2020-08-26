@@ -63,7 +63,7 @@ end
 
 def self.all_students_in_grade_9
 sql = <<-SQL
-    SELECT students 
+    SELECT students.name  
     SQL
 
     DB[:conn].execute(sql)
